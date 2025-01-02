@@ -4,7 +4,10 @@ export default function TextArea(props) {
   const handleOnClick = () => {
     //   console.log(text)
     setText(text.toUpperCase());
-
+  };
+  const handleOnLoClick = () => {
+    //   console.log(text)
+    setText(text.toLowerCase());
   };
   const handleOnchange = (event) => {
     // console.log(text)
@@ -23,9 +26,21 @@ export default function TextArea(props) {
           id="exampleFormControlTextarea1"
           rows="8"
         ></textarea>
-        <button className="btn btn-primary my-4" onClick={handleOnClick}>
+        <button className="btn btn-primary my-4 mx-2" onClick={handleOnClick}>
           Convert To Uppercase
         </button>
+        <button className="btn btn-primary my-4 mx-2" onClick={handleOnLoClick}>
+          Convert To Lowercase
+        </button>
+      </div>
+      <div className="container">
+        <h2>Your Text Summary</h2>
+        <p>
+          {text.split(" ").length} Words {text.length} Characters
+        </p>
+        <p>{0.08 * text.split(" ").length} minutes read</p>
+        <h2>Preview Text</h2>
+        <p>{text}</p>
       </div>
     </>
   );
