@@ -9,11 +9,15 @@ export default function TextArea(props) {
     //   console.log(text)
     setText(text.toLowerCase());
   };
+  const handleOnReplaceClick = () => {
+    //   console.log(text)
+    setText(text.replaceAll(text,''));
+  };
   const handleOnchange = (event) => {
     // console.log(text)
     setText(event.target.value);
   };
-  const [text, setText] = useState("Enter Text here");
+  const [text, setText] = useState("");
 
   return (
     <>
@@ -31,6 +35,9 @@ export default function TextArea(props) {
         </button>
         <button className="btn btn-primary my-4 mx-2" onClick={handleOnLoClick}>
           Convert To Lowercase
+        </button>
+        <button className="btn btn-primary my-4 mx-2" onClick={handleOnReplaceClick}>
+          Replace Text
         </button>
       </div>
       <div className="container">
