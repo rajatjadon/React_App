@@ -9,8 +9,8 @@ function App() {
       <Navbar />
       {/* <Navbar title="React App" about='About React'/> */}
       <div className="container">
-        {/* <TextArea heading="Enter your Text below"/> */}
-        <About/>
+        <TextArea heading="Enter your Text below"/>
+        {/* <About/> */}
       </div>
     </>
   );
