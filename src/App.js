@@ -1,7 +1,7 @@
 import "./App.css";
-import About from "./Components/About";
+// import About from "./Components/About";
 import Navbar from "./Components/Navbar";
-// import TextArea from "./Components/TextArea";
+import TextArea from "./Components/TextArea";
 
 function App() {
   return (
